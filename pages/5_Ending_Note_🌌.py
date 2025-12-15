@@ -59,7 +59,7 @@ with col2:
     **🎭 Genre Representation**
     - Wikipedia Plot sections reflect movie genres very well
     - Many films strongly express multiple genres
-    - Genre scoreing reveal nuance lost in single-label classification
+    - Genre scoring reveals nuances lost in single-label classification
     """)
 
 
