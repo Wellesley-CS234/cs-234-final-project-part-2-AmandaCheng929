@@ -113,8 +113,9 @@ Below, you can compare a portion of the dataset **before and after classificatio
 
     
     st.markdown("""
-
+    **Evaluation*:* To evaluate the efficiency of classification, the percentage of accuracy is determined by whether or not the model obtains a value greater than 0.5 for a class 1 and less than 0.5 for a class 0 for each genre.
     """)
+    st.metric("Accuracy", "79.3%✅")
 
 
 st.subheader('🏆 See Top Genre-Scoring Movies')

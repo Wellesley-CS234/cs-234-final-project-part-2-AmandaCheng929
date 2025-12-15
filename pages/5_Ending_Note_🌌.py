@@ -60,6 +60,7 @@ with col2:
     - Wikipedia Plot sections reflect movie genres very well
     - Many films strongly express multiple genres
     - Genre scoring reveals nuances lost in single-label classification
+    - 79.3% accuracy in genre scoring
     """)
 
 
