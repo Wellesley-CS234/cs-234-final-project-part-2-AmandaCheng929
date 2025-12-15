@@ -7,8 +7,6 @@ st.set_page_config(
 )
 
 
-
-
 if "progress" not in st.session_state:
     mode = st.sidebar.segmented_control(
     'Choose "Show Process" to see datasets and steps for each page:',
@@ -50,8 +48,11 @@ Is it box office performance, audience attention, or how well it embodies its ge
 
 This project combines **IMDb performance**, **Wikipedia pageviews**, as well as **plot analysis**
 to explore how films performed — and how audiences engaged with them — throughout 2024.
+
 """
 )
+
+st.markdown("<p style='font-size:20px;'><strong>How well does wikipedia act as a proxy for audience interest and genre depiction for movies?</p>", unsafe_allow_html=True)
 
 st.metric("Movies Analyzed:", "23k+ 🎞️")
 
@@ -76,7 +77,9 @@ Use the sidebar to explore different parts of the analysis:
 st.page_link("pages/2_Movies_in_Wikipedia_📊.py", label="📊 Movies in Wikipedia")
 st.markdown(
 """
+- See how wikipedia reflect audience interest in different genres of movies?
 - See how a movie's pageview for Wikipedia relates to its rating, popularity, and revenue as reported by IMDb.
+
 """)
 st.page_link("pages/3_Film_Genre_Classification_🎭.py", label="🎭 Film Genre Classification")
 st.markdown(
@@ -86,7 +89,7 @@ st.markdown(
 st.page_link("pages/4_Movie_Composition_🧩.py", label="🧩 Movie Composition")
 st.markdown(
 """
-- Select up to 5 movies to compare their score in each genre to better understand their multidimensional composition.
+- Select up to 10 movies to compare their score in each genre to better understand their multidimensional composition.
 
 
 Use the **mode selection** in the sidebar to see progress, datasets and steps taken in each page.
