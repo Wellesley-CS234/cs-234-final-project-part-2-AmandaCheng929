@@ -127,7 +127,7 @@ choice = st.selectbox(
 )
 
 
-choice = choice[:-2].strip()
+choice = choice.split(' ')[0]
 temp_df = df_score[['title', choice]].sort_values(choice, ascending = False)
 temp_df[choice] = temp_df[choice].apply(lambda x: str(round(x,4)))
 temp_df = temp_df.rename(columns={choice: f"{choice} Genre Score"})
