@@ -72,7 +72,7 @@ st.subheader("🧭 Page Navigation Guide")
 st.success("Use the **mode selection** in the sidebar to see progress, datasets and steps taken in each page.")
 st.markdown(
 """
-Use the sidebar to explore different parts of the analysis:
+Explore different parts of the analysis:
 """)
 st.page_link("pages/2_Movies_in_Wikipedia_📊.py", label="📊 Movies in Wikipedia")
 st.markdown(
