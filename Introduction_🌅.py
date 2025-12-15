@@ -69,7 +69,7 @@ st.markdown(
 
 st.markdown("---")
 st.subheader("🧭 Page Navigation Guide")
-
+st.success("Use the **mode selection** in the sidebar to see progress, datasets and steps taken in each page.")
 st.markdown(
 """
 Use the sidebar to explore different parts of the analysis:
@@ -87,12 +87,10 @@ st.markdown(
 - Explore top films in each genre and look at keywords in the plot representing this genre.
 """)
 st.page_link("pages/4_Movie_Composition_🧩.py", label="🧩 Movie Composition")
+
 st.markdown(
 """
 - Select up to 10 movies to compare their score in each genre to better understand their multidimensional composition.
-
-
-Use the **mode selection** in the sidebar to see progress, datasets and steps taken in each page.
 """)
 
 st.markdown("---")
