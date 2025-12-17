@@ -103,7 +103,6 @@ Movies don’t just succeed in theaters—they live online.
 
 Especially after the global COVID-19 pandemic, more and more audiences choose to view movies at home! 
 As we live in a society with more and more rapid lifestyles, people seem to be more cautious and selective with what movies are "worth" their time investment.""")
-st.image("watching_movie.jpeg", width=500)
 st.markdown(
 """
 Think about how you would approach watching a movie now a days.
@@ -113,7 +112,7 @@ If you do, your engagement with movies are no longer limited to watching the mov
 
 st.markdown("<p style='font-size:20px;'><strong>I hypothesize that wikipedia engagment is much higher for films released in the 21st century than those released in the 20th century.</p>", unsafe_allow_html=True)
 st.markdown("Is that true? Let's find out!")
-
+st.image("watching_movie.jpeg", width=500)
 st.markdown(
 """
 In this project, we examine film engagement in **2024** by:

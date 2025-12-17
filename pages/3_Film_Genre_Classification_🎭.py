@@ -122,13 +122,13 @@ st.subheader('🏆 See Top Genre-Scoring Movies')
 genre_emo = []
 genre_col = df_score.columns.tolist()[1:]
 for each in genre_col:
-    genre_emo.append(f"{each} {emojis[each]}")
+    genre_emo.append(f"{each}  {emojis[each]}")
 choice = st.selectbox(
     'Select Genre', genre_emo
 )
 
 
-choice = choice.split(' ')[0]
+choice = choice.split('  ')[0]
 temp_df = df_score[['title', choice]].sort_values(choice, ascending = False)
 temp_df[choice] = temp_df[choice].apply(lambda x: str(round(x,4)))
 temp_df = temp_df.rename(columns={choice: f"{choice} Genre Score"})

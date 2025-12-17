@@ -141,6 +141,16 @@ fig.update_yaxes(
 )
 st.plotly_chart(fig, use_container_width=True, key = 'rank')
 
+if per:
+    st.markdown("The number of works for each genre is different: ")
+    df_dis = df_rank.rename(columns={
+        'genre': "Genre",
+        'total_view': "Total Pageviews",
+        'number': "Number of Works",
+        'view_work': "Average Pageview per Work"
+    })
+    st.dataframe(df_dis)
+
 st.markdown("""
             
 
@@ -203,6 +213,62 @@ with col3:
     """
     - Overall positive relationship, and high revenue appears to guaruntee high wikipedia page views
     - High revenue outliers generally represent **high-popularity IPs**
+    """
+    )
+
+st.markdown("---")
+st.header('Hypothesis Testing: 20th-Century vs 21st-Century 📊')
+st.markdown(
+        """
+            Is it true that the audience tends to browse the wikipedia pages of newer (21st century released films) more than older (20th century released) movies?
+
+            Below is a boxplot demonstrating the 
+        """)
+
+def checkCent(date):
+    year = int(date[:4])
+    if year>=2000:
+        return "21st-Century"
+    else:
+        return "20th-Century"
+
+df_sub = df_allviews[['release_date','total_pageview']]
+df_sub['century'] = df_sub['release_date'].apply(lambda x: checkCent(x))
+df_sub = df_sub[['century','total_pageview']]
+df_sub = df_sub[df_sub['total_pageview']!=0]
+
+fig = px.box(
+    df_sub,
+    x="century",
+    y="total_pageview",
+    category_orders={
+        "century": ["20th-Century", "21st-Century"]
+    },
+    labels={
+        "century": "Century",
+        "total_pageview": "Total Pageviews"
+    }
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("20th-Century:", "38713 👁")
+    st.markdown('views/movie')
+
+with col2:
+    st.metric("21th-Century:", "51228 👁")
+    st.markdown('views/movie')
+
+with col3:
+    st.metric("p-value:", "2.61e-09 ✅")
+    st.markdown(
+    """
+    - Two-sample hypothesis testing
+    - This p value rejects the null hypothesis and indicates that **there is significant difference** between 20th and 21st century released films!
+
     """
     )
 
