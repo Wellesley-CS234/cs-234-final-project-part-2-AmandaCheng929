@@ -54,6 +54,7 @@ to explore how films performed — and how audiences engaged with them — throu
 
 st.markdown("<p style='font-size:20px;'><strong>How well does wikipedia act as a proxy for audience interest and genre depiction for movies?</p>", unsafe_allow_html=True)
 
+
 st.metric("Movies Analyzed:", "23k+ 🎞️")
 
 
@@ -108,9 +109,14 @@ st.markdown(
 Think about how you would approach watching a movie now a days.
 _Will you look up its rating? Its reviews? Its plot? Its genre?_
 If you do, your engagement with movies are no longer limited to watching the movie itself, but also all this research that goes before watching them.
+""")
 
+st.markdown("<p style='font-size:20px;'><strong>I hypothesize that wikipedia engagment is much higher for films released in the 21st century than those released in the 20th century.</p>", unsafe_allow_html=True)
+st.markdown("Is that true? Let's find out!")
 
-In this project, we examine films released in **2024** by:
+st.markdown(
+"""
+In this project, we examine film engagement in **2024** by:
 - Measuring **performance metrics** from IMDb
 - Tracking **public attention** through Wikipedia pageviews
 - Analyzing **Wikipedia plot summaries** to quantify how strongly a movie represents different genres
