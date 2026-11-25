@@ -114,9 +114,9 @@ if st.session_state.progress:
 
 st.subheader("🏅 Most Viewed Genre on Wikipedia")
 col1, col2, col3 = st.columns(3)
-col1.metric("Top 1", f"{df_rank.iloc[0][0]} {emojis[df_rank.iloc[0][0]]}")
-col2.metric("Top 2", f"{df_rank.iloc[1][0]} {emojis[df_rank.iloc[1][0]]}")
-col3.metric("Top 3", f"{df_rank.iloc[2][0]} {emojis[df_rank.iloc[2][0]]}")
+col1.metric("Top 1", f"{df_rank.iloc[0, 0]} {emojis[df_rank.iloc[0, 0]]}")
+col2.metric("Top 2", f"{df_rank.iloc[1, 0]} {emojis[df_rank.iloc[1, 0]]}")
+col3.metric("Top 3", f"{df_rank.iloc[2, 0]} {emojis[df_rank.iloc[2, 0]]}")
 
 genre_col = df_rank['genre'].tolist()
 per = st.toggle("Average Views Per Work")
